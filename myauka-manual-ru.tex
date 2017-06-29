@@ -1725,6 +1725,15 @@ $E$   & $B$ & $A$ \\  \hline
 \textcolor{Green}{\textit{имя_кода_лексемы}}\texttt{\textcolor{Green}{\{}},\textcolor{Green}{\textit{имя_кода_лексемы}}\texttt{\textcolor{Green}{\}}}
 
 \noindent%
+\texttt{\textcolor{Green}{[}}\textbf{\%header_additions}  \textcolor{Green}{\textit{дополнения_для_заголовочного_файла}}\texttt{\textcolor{Green}{]}}
+
+\noindent%
+\texttt{\textcolor{Green}{[}}\textbf{\%impl_additions}  \textcolor{Green}{\textit{дополнения_для_файла_реализации}}\texttt{\textcolor{Green}{]}}
+
+\noindent%
+\texttt{\textcolor{Green}{[}}\textbf{\%lexem_info_name}  \textcolor{Green}{\textit{имя_типа_со_сведениями_о_лексеме}}\texttt{\textcolor{Green}{]}}
+
+\noindent%
 \texttt{\textcolor{Green}{[}}\textbf{\%keywords} \texttt{\textcolor{Green}{[}}\textcolor{Green}{\textit{действия_по_завершении}}:\texttt{\textcolor{Green}{]}}
 
 \textcolor{Green}{\textit{строка_ключевого_слова}} : \textcolor{Green}{\textit{код_ключевого_слова}}
@@ -1828,6 +1837,31 @@ enum имя_типа_кодов_лексем : unsigned short {
 \textbf{\%ident_name} \textcolor{Green}{\textit{имя_идентификатора}}
 
 \noindent указывает имя кода лексемы для лексемы 'идентификатор'. Если в языке, для которого пишется сканер, идентификаторов нет, то команда \textbf{\%ident_name} необязательна.
+
+Если в начало заголовочного файла генерируемого сканера нужно добавить какой--либо текст, то нужно указать команду
+
+\noindent%
+\textbf{\%header_additions}  \textcolor{Green}{\textit{дополнения_для_заголовочного_файла}}
+
+\noindent%
+Здесь  \textcolor{Green}{\textit{дополнения_для_заголовочного_файла}} --- строковый литерал с добавляемым текстом.
+
+Аналогично, если в начало файла реализации генерируемого сканера нужно добавить какой--либо текст, то нужно указать команду
+
+\noindent%
+\textbf{\%impl_additions}  \textcolor{Green}{\textit{дополнения_для_файла_реализации}}
+
+\noindent%
+Здесь  \textcolor{Green}{\textit{дополнения_для_файла_реализации}} --- строковый литерал с добавляемым текстом.
+
+Команда 
+
+\noindent%
+\textbf{\%lexem_info_name}  \textcolor{Green}{\textit{имя_типа_со_сведениями_о_лексеме}}
+
+\noindent%
+определяет имя типа со сведениями о лексеме. Принятое по умолчанию имя типа --- \texttt{Lexem_info}.
+
 
 Если в описание лексемы нужно добавить какие--либо поля, то необходимо написать команду
 
